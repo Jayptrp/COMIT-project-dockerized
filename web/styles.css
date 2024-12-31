@@ -1,0 +1,165 @@
+/* สไตล์สำหรับ body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* กล่องฟอร์ม */
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    position: relative;
+}
+
+/* หัวข้อฟอร์ม */
+.form-title {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f4f4f4;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #34495e;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* สไตล์สำหรับฟอร์ม */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ป้ายชื่อ (Label) */
+form label {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* ช่อง input */
+form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ปุ่ม */
+form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* ปุ่ม Cancel */
+form button[type="button"] {
+    background-color: #f44336;
+}
+
+form button[type="button"]:hover {
+    background-color: #d32f2f;
+}
+
+/* สไตล์สำหรับ body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* กล่องฟอร์ม */
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    position: relative;
+}
+
+/* หัวข้อฟอร์ม */
+.form-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* สไตล์สำหรับฟอร์ม */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ป้ายชื่อ (Label) */
+form label {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* ช่อง input */
+form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ปุ่ม */
+form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* ปุ่ม Cancel */
+form button[type="button"] {
+    background-color: #f44336;
+}
+
+form button[type="button"]:hover {
+    background-color: #d32f2f;
+}

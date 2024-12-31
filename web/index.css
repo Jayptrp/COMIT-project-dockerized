@@ -1,0 +1,501 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.header {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    letter-spacing: -1.7px;
+    text-align: center;
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 2% 10.2% auto 2.5% 3.5% 4.5% 2.5%;
+    align-items: center;
+    padding: 0 1.5rem;
+
+    .fan i {
+        color : skyblue;
+        transition: transform 10s ease-out, scale 8s linear;
+        transform-style: preserve-3d;
+        scale: 1.5;
+    }
+    .fan:hover i {
+        transform: rotatez(36000deg);
+        scale: 30;
+    }
+    .info-btn {
+        position: relative;
+        font-family: 'League Spartan', sans-serif;
+        color: #38b6ff;
+        font-size: 1.1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        border: 2px solid #38b6ff;
+        text-align: center;
+        padding: 0.2rem;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        .tooltip {
+            font-family: 'League Spartan', sans-serif;
+            color: #3594dc;
+            display: none;
+            position: absolute;
+            top: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            text-align: left;
+            line-height: 1.8;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            font-size: 1rem;
+            z-index: 10;
+            letter-spacing: 3px;
+            
+            h3{
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700 
+            }
+
+            u{
+                text-decoration: underline;
+            }
+
+            ul{
+                margin: 0;
+                padding-left: 1.5rem;
+                list-style-type: disc;
+            }
+
+            li{
+                margin-bottom: 0.5rem;
+                .highlight {
+                    font-family: 'Roboto', sans-serif;
+                    color: #ED6DBB;
+                    font-weight: bold;
+                }
+            }
+        }
+        .tooltip::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent white transparent;
+        }
+    }
+    .info-btn:hover {
+        background-color: #70b4db;
+        color: white;
+    }
+    .info-btn:hover .tooltip {
+        display: block;
+    }
+    .bell-btn {
+        color: rgb(255, 200, 0);
+        font-size: 1.7rem;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        transition: all 0.2s;
+    }
+    .bell-btn:hover {
+        box-shadow: 0 0 0.4rem rgb(180, 180, 180);
+    }
+    .profile-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: all 0.2s;
+    }
+    .profile-icon:hover {
+        opacity: 70%;
+    }
+    .profile-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .profile-popup {
+        letter-spacing: 0px;
+        font-weight: 200;
+        position: absolute;
+        top: 10vh;
+        right: 1rem;
+        width: 17rem;
+        height: 19rem;
+        background-color: #ffffff;
+        border-radius: 1rem;
+        padding: 1rem;
+        box-shadow: 0 0 1rem grey;
+        z-index: -999;
+        transition: opacity 0.3s;
+        form {
+            input { margin: 1rem 0;}
+            button { color: white; background-color: rgb(0, 178, 0); border: 0; border-radius: 1rem; padding: 0.2rem 0.4rem;}
+            button:hover { opacity: 70%;}
+        }
+        .user-infomation {
+            padding: 1rem;
+            background-color: pink;
+            border-radius: 0.5rem;
+        }
+
+            /* ปุ่ม Edit Password */
+        .edit-password-container {
+            margin-top: 0.5rem;
+            text-align: center; /* จัดปุ่มให้อยู่ตรงกลาง */
+        }
+
+        .edit-password-btn {
+            color: rgb(7, 7, 7);
+            background-color: rgba(201, 208, 200, 0.805); /* สีแดง */
+            border: 0;
+            border-radius: 1rem;
+            padding: 0.4rem 1rem;
+            font-size: 0.6rem;
+            cursor: pointer;
+        }
+
+        .edit-password-btn:hover {
+            opacity: 0.8; /* เอฟเฟกต์ hover */
+        }
+    }
+    .profile-popup.show {
+        z-index: 999
+    }
+
+    .item1 b {
+        font-size: 2rem
+    }
+    .logout-btn {
+        font-family: 'League Spartan', sans-serif;
+        border: 1px solid rgb(255, 0, 0);
+        padding: 3px 5px;
+        outline: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        color: rgb(255, 0, 0);
+        border-radius: 0.2rem;
+        transition: all 200ms;
+    }
+    .logout-btn:hover {
+        font-family: 'League Spartan', sans-serif;
+        background-color: rgb(196, 49, 49);
+        color: white;
+        border: 1px solid rgb(255, 255, 255);
+    }
+}
+
+.main {
+    font-family: 'League Spartan', sans-serif;
+    height: auto;
+    padding-bottom: 5rem;
+    background: rgb(161,255,223);
+    background: linear-gradient(90deg, rgba(161,255,223,1) 0%, rgba(190,255,248,1) 37%, rgba(96,183,255,1) 100%);
+
+    .btn-area {
+        display: grid;
+        grid-template-columns: auto 26%;
+        padding: 1rem 0;
+
+        button {
+            background-color: #FFAFE0;
+            border: 6px solid #ED6DBB ;
+            color: #ED6DBB;
+            padding: 10px 15px;
+            width: 200px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            i {
+                font-size: 20px;
+            }
+        }
+        button:hover {
+            background-color: rgb(199, 50, 199);
+            color: white;
+            border: 3px solid white;
+            padding: 13px 18px;
+            width: 200px;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 0 1rem purple;
+        }
+    }
+    .content {
+        .complaint-empty img {max-width: 100%; height: 100%;}
+        font-family: 'League Spartan', sans-serif;
+        margin: 0 10vh;
+        padding: 2rem 2rem 0 2rem;
+        background-color: #ffffff;
+        border-radius: 1rem;
+        box-shadow: 1px 1px 15px grey;
+        min-height: 59vh;
+
+        .popup-sort {
+            position: absolute;
+            top: 24%;
+            right: 22rem;
+            background-color: #FFAFE0;
+            padding: 1rem;
+            border-radius: 2rem;
+            opacity: 0; /* Initial state hidden */
+            scale: 0.3;
+            transition: opacity 0.4s ease, transform 0.4s ease, scale 0.4s ease; /* Transition properties */
+            display: block; /* Ensure the element occupies space */
+        }
+        .popup-sort.show {
+            opacity: 1; /* Fade in */
+            scale: 1;
+        }
+        .popup-search {
+            position: absolute;
+            top: 24%;
+            right: 35rem;
+            background-color: #FFAFE0;
+            padding: 1rem;
+            border-radius: 2rem;
+            opacity: 0; /* Initial state hidden */
+            scale: 0.3;
+            transition: opacity 0.4s ease, transform 0.4s ease, scale 0.4s ease; /* Transition properties */
+            display: block; /* Ensure the element occupies space */
+        }
+        .popup-search.show {
+            opacity: 1; /* Fade in */
+            scale: 1;
+        }
+        .popup-date {
+            position: absolute;
+            top: 24%;
+            right: 52rem;
+            background-color: #FFAFE0;
+            padding: 1rem;
+            border-radius: 2rem;
+            opacity: 0; /* Initial state hidden */
+            scale: 0.3;
+            transition: opacity 0.4s ease, transform 0.4s ease, scale 0.4s ease; /* Transition properties */
+            display: block; /* Ensure the element occupies space */
+        }
+        .popup-date.show {
+            opacity: 1; /* Fade in */
+            scale: 1;
+        }
+
+        .content-btn-area {
+            display: grid;
+            grid-template-columns: 30% auto 5% 5% 5%;
+            padding: 0rem 0rem 1rem 0rem;
+
+            #month {
+                font-size: 2.5rem;
+                color: #3c3c3c;
+                transform: translateY(10px);
+            }
+            button {
+                background: transparent;
+                border: 1px solid grey;
+                border-radius: 2rem;
+                padding: 0.5rem;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+            button:hover {
+                background: #FFAFE0;
+            }
+            button i {
+                font-size: 1.5rem;
+            }
+        }
+        .complaint-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 0.3fr;
+            padding: 0.5rem;
+            font-weight: bold;
+            border-top: 2.7px solid grey ;
+            border-bottom: 0.3px solid grey;
+
+            .grid-item1 {
+                padding: 1rem;
+            }
+            .grid-item2,.grid-item3,.grid-item4,.grid-item5 {
+                text-align: center;
+                padding: 1rem;
+            }
+        }
+        .complaint:hover { background: rgb(225, 225, 225);}
+        .complaint-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 0.3fr;
+            padding: 1rem;
+            border-top: 2px solid grey;
+
+            .c1 { background-color: #F64646; }
+            .c2 { background-color: #F8A321; }
+            .c3 { background-color: #7ED957; }
+            .Waiting { background-color: rgb(187, 187, 187); }
+            .In-Progress {background-color: pink; }
+            .Completed { background-color: lightskyblue; }
+            .grid-item1 {
+                padding: 1rem;
+                width: fit-content;
+                border-radius: 2rem;
+            }
+            .grid-item4 {
+                padding: 1rem;
+                width: 100%;
+                border-radius: 2rem;
+                text-align: center;
+            }
+            .grid-item2,.grid-item3,.grid-item5 {
+                text-align: center;
+                padding: 1rem;
+            }
+            .fa-caret-down {
+                scale: 1.5;
+                color: purple;
+                transition: transform 0.5s; /* Smooth animation */
+                transform: rotateZ(0deg); /* Initial rotation */
+            }
+        }
+        .complaint-grid:hover { background: rgb(225, 225, 225);}
+        .complaint-box {
+            display: none;
+            transition: all 2s;
+            opacity: 100%;
+            grid-template-columns:  4fr 0.3fr;
+            padding: 0.2rem 1rem 1rem 1rem;
+            .grid-item1 {
+                opacity: 70%;
+                padding: 0.5rem;
+            }
+            .grid-item2 {
+                text-align: center;
+                a {
+                    border-radius: 1rem;
+                    border: 0;
+                    padding: 0.4rem;
+                    background-color: purple;
+                    color: #ffffff;
+                    cursor: pointer;
+                }
+                i {
+                    margin-right: 2px;
+                }
+            }
+        }
+    }
+}
+
+/* Basic styles for the popup */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixes the popup to the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    justify-content: center; /* Centers the popup horizontally */
+    align-items: center; /* Centers the popup vertically */
+    z-index: 1000; /* Ensures the popup is on top of other content */
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* Style for the actual popup content */
+.edit-popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px; /* Adjust the width as needed */
+    max-width: 90%; /* Ensure it doesn't exceed screen width */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for form elements */
+.edit-popup h3 {margin-bottom: 20px; color:purple}
+.edit-popup input,
+.edit-popup textarea,
+.edit-popup select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Style for buttons */
+.edit-popup button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-popup button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.edit-popup button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Close button specific style */
+#deleteComplaintButton {
+    background-color: #ff5722;
+    color: white;
+}
+
+/* When the popup is active, display it */
+.popup.show {
+    display: flex;
+}
+
+/* Optional: animation for opening the popup */
+.popup .edit-popup {
+    animation: popup-animation 0.3s ease-in-out;
+}
+
+@keyframes popup-animation {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.footer {
+    height: 10vh;
+    padding: 0 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+    display: grid;
+    grid-template-columns: 97% 3%;
+    align-items: center;
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
+

@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.notifications-list {
+    list-style: none;
+    padding: 0;
+}
+
+.notification {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.notification.unread {
+    background: #f9f9f9;
+    font-weight: bold;
+}
+
+.notification.read {
+    color: #777;
+}
+
+.notification p {
+    margin: 0;
+}
+
+.notification small {
+    display: block;
+    color: #999;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}

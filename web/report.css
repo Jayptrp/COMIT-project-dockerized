@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #2c3e50;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.exit {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: rgb(215, 48, 76);
+    color: white;
+    border-radius: 1.5rem;
+    border: 0;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.exit span {
+    opacity: 0;
+    transform: translateX(1rem);
+    font-size: 0.8rem;
+    transition: all 0.3s;
+}
+
+.exit:hover {
+    width: 3rem;
+}
+
+.exit:hover span {
+    opacity: 100%;
+    transform: translateX(0);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.card {
+    background: #ecf0f1;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background: #0078a7;
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
